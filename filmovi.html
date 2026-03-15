@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMax - Filmovi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="filmovi.css">
+</head>
+<body>
+
+    <div class="bg-effects">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+    </div>
+
+    <!-- Navigacija -->
+    <nav class="navbar">
+        <a href="filmovi.html" class="nav-brand">
+            <span class="brand-icon">&#9655;</span> CineMax
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="filmovi.html" class="active">Filmovi</a></li>
+            <li><a href="raspored.html">Raspored</a></li>
+            <li><a href="sala.html">Sala</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero sekcija -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">&#127916; Bioskop CineMax</span>
+            <h1>Otkrijte magiju <span class="accent">velikog platna</span></h1>
+            <p>Pretražite naš izbor filmova i pronađite svoju sljedeću avanturu</p>
+        </div>
+    </header>
+
+    <!-- Legenda -->
+    <div class="legend">
+        <div class="legend-item">
+            <span class="legend-dot legend-active"></span> Prikazuje se
+        </div>
+        <div class="legend-item">
+            <span class="legend-dot legend-upcoming"></span> Uskoro dolazi
+        </div>
+        <div class="legend-item">
+            <span class="legend-dot legend-expired"></span> Nije u ponudi
+        </div>
+    </div>
+
+    <main class="content">
+
+        <!-- Akcija -->
+        <section class="genre-section" data-genre="action">
+            <div class="genre-header">
+                <h2 class="genre-title"><span class="genre-icon">&#127919;</span> Akcija</h2>
+                <div class="genre-line"></div>
+            </div>
+            <div class="movies-grid">
+                <div class="movie-card status-active">
+                    <div class="movie-poster">
+                        <img src="slike/gladijator 2.webp" alt="Gladijator II">
+                        <div class="poster-overlay">
+                            <a href="raspored.html" class="btn-tickets">Kupi kartu</a>
+                        </div>
+                        <span class="status-badge active">U kinu</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Gladijator II</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">148 min</span>
+                            <span class="movie-rating">&#9733; 8.1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-active">
+                    <div class="movie-poster">
+                        <img src="slike/images.jpeg" alt="John Wick 5">
+                        <div class="poster-overlay">
+                            <a href="raspored.html" class="btn-tickets">Kupi kartu</a>
+                        </div>
+                        <span class="status-badge active">U kinu</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">John Wick 5</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">131 min</span>
+                            <span class="movie-rating">&#9733; 7.9</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-upcoming">
+                    <div class="movie-poster">
+                        <img src="slike/mission impossible.jpg" alt="Mission Impossible 9">
+                        <div class="poster-overlay">
+                            <span class="btn-tickets btn-soon">Uskoro</span>
+                        </div>
+                        <span class="status-badge upcoming">Uskoro</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Mission Impossible 9</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">142 min</span>
+                            <span class="movie-rating">&#9733; --</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-expired">
+                    <div class="movie-poster">
+                        <img src="slike/mad max furiosa.jpg" alt="Mad Max: Furiosa">
+                        <div class="poster-overlay">
+                            <span class="btn-tickets btn-gone">Završeno</span>
+                        </div>
+                        <span class="status-badge expired">Završeno</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Mad Max: Furiosa</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">148 min</span>
+                            <span class="movie-rating">&#9733; 7.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drama -->
+        <section class="genre-section" data-genre="drama">
+            <div class="genre-header">
+                <h2 class="genre-title"><span class="genre-icon">&#127917;</span> Drama</h2>
+                <div class="genre-line"></div>
+            </div>
+            <div class="movies-grid">
+                <div class="movie-card status-active">
+                    <div class="movie-poster">
+                        <img src="slike/the brutalist.jpeg" alt="The Brutalist">
+                        <div class="poster-overlay">
+                            <a href="raspored.html" class="btn-tickets">Kupi kartu</a>
+                        </div>
+                        <span class="status-badge active">U kinu</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Brutalist</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">215 min</span>
+                            <span class="movie-rating">&#9733; 8.4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-upcoming">
+                    <div class="movie-poster">
+                        <img src="slike/september 5.jpg" alt="September 5">
+                        <div class="poster-overlay">
+                            <span class="btn-tickets btn-soon">Uskoro</span>
+                        </div>
+                        <span class="status-badge upcoming">Uskoro</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">September 5</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">95 min</span>
+                            <span class="movie-rating">&#9733; --</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-active">
+                    <div class="movie-poster">
+                        <img src="slike/anora.jpg" alt="Anora">
+                        <div class="poster-overlay">
+                            <a href="raspored.html" class="btn-tickets">Kupi kartu</a>
+                        </div>
+                        <span class="status-badge active">U kinu</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Anora</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">139 min</span>
+                            <span class="movie-rating">&#9733; 8.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-expired">
+                    <div class="movie-poster">
+                        <img src="slike/oppenheimer.jpeg" alt="Oppenheimer">
+                        <div class="poster-overlay">
+                            <span class="btn-tickets btn-gone">Završeno</span>
+                        </div>
+                        <span class="status-badge expired">Završeno</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Oppenheimer</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">180 min</span>
+                            <span class="movie-rating">&#9733; 8.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Komedija -->
+        <section class="genre-section" data-genre="comedy">
+            <div class="genre-header">
+                <h2 class="genre-title"><span class="genre-icon">&#128514;</span> Komedija</h2>
+                <div class="genre-line"></div>
+            </div>
+            <div class="movies-grid">
+                <div class="movie-card status-active">
+                    <div class="movie-poster">
+                        <img src="slike/deadpool & wolverine.jpg" alt="Deadpool & Wolverine">
+                        <div class="poster-overlay">
+                            <a href="raspored.html" class="btn-tickets">Kupi kartu</a>
+                        </div>
+                        <span class="status-badge active">U kinu</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Deadpool & Wolverine</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">128 min</span>
+                            <span class="movie-rating">&#9733; 7.7</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-upcoming">
+                    <div class="movie-poster">
+                        <img src="slike/bridget jones 4.jpg" alt="Bridget Jones 4">
+                        <div class="poster-overlay">
+                            <span class="btn-tickets btn-soon">Uskoro</span>
+                        </div>
+                        <span class="status-badge upcoming">Uskoro</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Bridget Jones 4</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">110 min</span>
+                            <span class="movie-rating">&#9733; --</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-expired">
+                    <div class="movie-poster">
+                        <img src="slike/barbie.jpg" alt="Barbie">
+                        <div class="poster-overlay">
+                            <span class="btn-tickets btn-gone">Završeno</span>
+                        </div>
+                        <span class="status-badge expired">Završeno</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Barbie</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">114 min</span>
+                            <span class="movie-rating">&#9733; 7.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-active">
+                    <div class="movie-poster">
+                        <img src="slike/bad boys 4.jpg" alt="Bad Boys 4">
+                        <div class="poster-overlay">
+                            <a href="raspored.html" class="btn-tickets">Kupi kartu</a>
+                        </div>
+                        <span class="status-badge active">U kinu</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Bad Boys 4</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">115 min</span>
+                            <span class="movie-rating">&#9733; 6.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animirani -->
+        <section class="genre-section" data-genre="animated">
+            <div class="genre-header">
+                <h2 class="genre-title"><span class="genre-icon">&#127912;</span> Animirani</h2>
+                <div class="genre-line"></div>
+            </div>
+            <div class="movies-grid">
+                <div class="movie-card status-active">
+                    <div class="movie-poster">
+                        <img src="slike/insideout 2.jpeg" alt="Inside Out 2">
+                        <div class="poster-overlay">
+                            <a href="raspored.html" class="btn-tickets">Kupi kartu</a>
+                        </div>
+                        <span class="status-badge active">U kinu</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Inside Out 2</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">96 min</span>
+                            <span class="movie-rating">&#9733; 7.6</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-upcoming">
+                    <div class="movie-poster">
+                        <img src="slike/zootopia 2.jpg" alt="Zootopia 2">
+                        <div class="poster-overlay">
+                            <span class="btn-tickets btn-soon">Uskoro</span>
+                        </div>
+                        <span class="status-badge upcoming">Uskoro</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Zootopia 2</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">102 min</span>
+                            <span class="movie-rating">&#9733; --</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-active">
+                    <div class="movie-poster">
+                        <img src="slike/moana 2.jpg" alt="Moana 2">
+                        <div class="poster-overlay">
+                            <a href="raspored.html" class="btn-tickets">Kupi kartu</a>
+                        </div>
+                        <span class="status-badge active">U kinu</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Moana 2</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">100 min</span>
+                            <span class="movie-rating">&#9733; 7.3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card status-expired">
+                    <div class="movie-poster">
+                        <img src="slike/Spider-Verse 2.jpg" alt="Spider-Man: Across the Spider-Verse">
+                        <div class="poster-overlay">
+                            <span class="btn-tickets btn-gone">Završeno</span>
+                        </div>
+                        <span class="status-badge expired">Završeno</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Spider-Verse 2</h3>
+                        <div class="movie-meta">
+                            <span class="movie-duration">140 min</span>
+                            <span class="movie-rating">&#9733; 8.7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand"><span class="brand-icon">&#9655;</span> CineMax</div>
+            <p>&copy; 2026 CineMax Kino. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-open');
+            navToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-open');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Scroll reveal animacija
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.genre-section, .movie-card').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
