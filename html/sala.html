@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMax - Sala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sala.css">
+</head>
+<body>
+
+    <div class="bg-effects">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+    </div>
+
+    <!-- Navigacija -->
+    <nav class="navbar">
+        <a href="filmovi.html" class="nav-brand">
+            <span class="brand-icon">&#9655;</span> CineMax
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="filmovi.html">Filmovi</a></li>
+            <li><a href="raspored.html">Raspored</a></li>
+            <li><a href="sala.html" class="active">Sala</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="filmovi.html">Filmovi</a>
+            <span class="bc-sep">&#8250;</span>
+            <a href="raspored.html">Raspored</a>
+            <span class="bc-sep">&#8250;</span>
+            <span class="bc-current">Odabir sjedišta</span>
+        </div>
+
+        <!-- Info o projekciji -->
+        <div class="screening-info">
+            <div class="screening-left">
+                <h1 class="screening-movie" id="movieName">Gladijator II</h1>
+                <div class="screening-details">
+                    <div class="detail-chip">
+                        <span class="detail-icon">&#128336;</span>
+                        <span id="movieTime">20:30</span>
+                    </div>
+                    <div class="detail-chip">
+                        <span class="detail-icon">&#127916;</span>
+                        <span>Sala <span id="movieHall">1</span></span>
+                    </div>
+                    <div class="detail-chip">
+                        <span class="detail-icon">&#128197;</span>
+                        <span>Danas</span>
+                    </div>
+                </div>
+            </div>
+            <a href="raspored.html" class="btn-back">&#8592; Nazad na raspored</a>
+        </div>
+
+        <!-- Legenda sjedišta -->
+        <div class="seat-legend">
+            <div class="legend-item">
+                <span class="legend-seat legend-free"></span> Slobodno
+            </div>
+            <div class="legend-item">
+                <span class="legend-seat legend-taken"></span> Zauzeto
+            </div>
+            <div class="legend-item">
+                <span class="legend-seat legend-reserved"></span> Rezervisano
+            </div>
+        </div>
+
+        <!-- Platno -->
+        <div class="screen-container">
+            <div class="screen">P L A T N O</div>
+            <div class="screen-glow"></div>
+        </div>
+
+        <!-- Raspored sjedišta -->
+        <div class="hall-container">
+            <div class="seating-area" id="seatingArea">
+                <!-- Generisano JavaScript-om -->
+            </div>
+        </div>
+
+        <!-- Info o rezervaciji -->
+        <div class="reservation-panel" id="reservationPanel">
+            <div class="reservation-left">
+                <h3>Vaša rezervacija</h3>
+                <p class="selected-seats" id="selectedSeats">Kliknite na zeleno sjedište za rezervaciju</p>
+            </div>
+            <div class="reservation-right">
+                <div class="seat-counter">
+                    <span class="counter-num" id="seatCount">0</span>
+                    <span class="counter-label">sjedišta</span>
+                </div>
+                <button class="btn-confirm" id="btnConfirm" disabled>Potvrdi rezervaciju</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand"><span class="brand-icon">&#9655;</span> CineMax</div>
+            <p>&copy; 2026 CineMax Kino. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-confetti">
+                <div class="confetti-piece"></div>
+                <div class="confetti-piece"></div>
+                <div class="confetti-piece"></div>
+                <div class="confetti-piece"></div>
+                <div class="confetti-piece"></div>
+                <div class="confetti-piece"></div>
+                <div class="confetti-piece"></div>
+                <div class="confetti-piece"></div>
+                <div class="confetti-piece"></div>
+                <div class="confetti-piece"></div>
+            </div>
+            <div class="modal-icon">&#9989;</div>
+            <h2 class="modal-title">Rezervacija potvrđena!</h2>
+            <p class="modal-subtitle">Vaše ulaznice su uspješno rezervisane</p>
+            <div class="modal-divider"></div>
+            <div class="modal-details">
+                <div class="modal-row">
+                    <span class="modal-label">&#127916; Film</span>
+                    <span class="modal-value" id="modalFilm"></span>
+                </div>
+                <div class="modal-row">
+                    <span class="modal-label">&#128336; Vrijeme</span>
+                    <span class="modal-value" id="modalTime"></span>
+                </div>
+                <div class="modal-row">
+                    <span class="modal-label">&#128186; Sala</span>
+                    <span class="modal-value" id="modalHall"></span>
+                </div>
+                <div class="modal-row">
+                    <span class="modal-label">&#128186; Sjedišta</span>
+                    <span class="modal-value" id="modalSeats"></span>
+                </div>
+                <div class="modal-row">
+                    <span class="modal-label">&#127903; Ukupno</span>
+                    <span class="modal-value" id="modalTotal"></span>
+                </div>
+            </div>
+            <p class="modal-thanks">&#127871; Hvala vam! Uživajte u filmu!</p>
+            <button class="modal-btn" id="modalClose">Zatvori</button>
+        </div>
+    </div>
+
+    <script src="sala.js"></script>
+
+</body>
+</html>

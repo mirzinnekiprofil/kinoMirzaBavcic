@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMax - Raspored</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="raspored.css">
+</head>
+<body>
+
+    <div class="bg-effects">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+    </div>
+
+    <!-- Navigacija -->
+    <nav class="navbar">
+        <a href="filmovi.html" class="nav-brand">
+            <span class="brand-icon">&#9655;</span> CineMax
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="filmovi.html">Filmovi</a></li>
+            <li><a href="raspored.html" class="active">Raspored</a></li>
+            <li><a href="sala.html">Sala</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">&#128197; Raspored projekcija</span>
+            <h1>Odaberite <span class="accent">projekciju</span></h1>
+            <p>Kliknite na termin da rezervišete sjedišta u kino sali</p>
+        </div>
+    </header>
+
+    <!-- Datum filter -->
+    <div class="date-bar">
+        <button class="date-btn active" data-day="today">Danas</button>
+        <button class="date-btn" data-day="tomorrow">Sutra</button>
+        <button class="date-btn" data-day="day3">Pet 14.03.</button>
+        <button class="date-btn" data-day="day4">Sub 15.03.</button>
+        <button class="date-btn" data-day="day5">Ned 16.03.</button>
+    </div>
+
+    <main class="content">
+
+        <!-- Gladijator II -->
+        <div class="schedule-card">
+            <div class="schedule-poster">
+                <img src="slike/gladijator 2.webp" alt="Gladijator II">
+            </div>
+            <div class="schedule-body">
+                <div class="schedule-header">
+                    <h2 class="schedule-movie">Gladijator II</h2>
+                    <div class="schedule-tags">
+                        <span class="tag tag-genre">Akcija</span>
+                        <span class="tag tag-duration">148 min</span>
+                        <span class="tag tag-rating">&#9733; 8.1</span>
+                    </div>
+                </div>
+                <p class="schedule-desc">Nastavak epske priče o gladijatoru koji se bori za slobodu i pravdu u areni drevnog Rima.</p>
+                <div class="showtimes">
+                    <h4 class="showtimes-label">Odaberite termin:</h4>
+                    <div class="showtimes-grid">
+                        <a href="sala.html?film=Gladijator II&vrijeme=14:30&sala=1" class="showtime-btn">
+                            <span class="showtime-time">14:30</span>
+                            <span class="showtime-hall">Sala 1</span>
+                        </a>
+                        <a href="sala.html?film=Gladijator II&vrijeme=17:00&sala=2" class="showtime-btn">
+                            <span class="showtime-time">17:00</span>
+                            <span class="showtime-hall">Sala 2</span>
+                        </a>
+                        <a href="sala.html?film=Gladijator II&vrijeme=20:30&sala=1" class="showtime-btn popular">
+                            <span class="popular-badge">Popularno</span>
+                            <span class="showtime-time">20:30</span>
+                            <span class="showtime-hall">Sala 1</span>
+                        </a>
+                        <a href="sala.html?film=Gladijator II&vrijeme=22:45&sala=3" class="showtime-btn">
+                            <span class="showtime-time">22:45</span>
+                            <span class="showtime-hall">Sala 3</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- John Wick 5 -->
+        <div class="schedule-card">
+            <div class="schedule-poster">
+                <img src="slike/images.jpeg" alt="John Wick 5">
+            </div>
+            <div class="schedule-body">
+                <div class="schedule-header">
+                    <h2 class="schedule-movie">John Wick 5</h2>
+                    <div class="schedule-tags">
+                        <span class="tag tag-genre">Akcija</span>
+                        <span class="tag tag-duration">131 min</span>
+                        <span class="tag tag-rating">&#9733; 7.9</span>
+                    </div>
+                </div>
+                <p class="schedule-desc">John Wick se vraća u još jednoj adrenalinom nabijanoj avanturi punoj borbi i osvete.</p>
+                <div class="showtimes">
+                    <h4 class="showtimes-label">Odaberite termin:</h4>
+                    <div class="showtimes-grid">
+                        <a href="sala.html?film=John Wick 5&vrijeme=15:00&sala=2" class="showtime-btn">
+                            <span class="showtime-time">15:00</span>
+                            <span class="showtime-hall">Sala 2</span>
+                        </a>
+                        <a href="sala.html?film=John Wick 5&vrijeme=18:15&sala=1" class="showtime-btn">
+                            <span class="showtime-time">18:15</span>
+                            <span class="showtime-hall">Sala 1</span>
+                        </a>
+                        <a href="sala.html?film=John Wick 5&vrijeme=21:00&sala=3" class="showtime-btn popular">
+                            <span class="popular-badge">Popularno</span>
+                            <span class="showtime-time">21:00</span>
+                            <span class="showtime-hall">Sala 3</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Brutalist -->
+        <div class="schedule-card">
+            <div class="schedule-poster">
+                <img src="slike/the brutalist.jpeg" alt="The Brutalist">
+            </div>
+            <div class="schedule-body">
+                <div class="schedule-header">
+                    <h2 class="schedule-movie">The Brutalist</h2>
+                    <div class="schedule-tags">
+                        <span class="tag tag-genre">Drama</span>
+                        <span class="tag tag-duration">215 min</span>
+                        <span class="tag tag-rating">&#9733; 8.4</span>
+                    </div>
+                </div>
+                <p class="schedule-desc">Vizuelno zadivljujuća drama o ambicioznom arhitekti koji pokušava ostvariti svoje snove u poslijeratnoj Americi.</p>
+                <div class="showtimes">
+                    <h4 class="showtimes-label">Odaberite termin:</h4>
+                    <div class="showtimes-grid">
+                        <a href="sala.html?film=The Brutalist&vrijeme=16:00&sala=1" class="showtime-btn">
+                            <span class="showtime-time">16:00</span>
+                            <span class="showtime-hall">Sala 1</span>
+                        </a>
+                        <a href="sala.html?film=The Brutalist&vrijeme=20:00&sala=2" class="showtime-btn popular">
+                            <span class="popular-badge">Popularno</span>
+                            <span class="showtime-time">20:00</span>
+                            <span class="showtime-hall">Sala 2</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deadpool & Wolverine -->
+        <div class="schedule-card">
+            <div class="schedule-poster">
+                <img src="slike/deadpool & wolverine.jpg" alt="Deadpool & Wolverine">
+            </div>
+            <div class="schedule-body">
+                <div class="schedule-header">
+                    <h2 class="schedule-movie">Deadpool & Wolverine</h2>
+                    <div class="schedule-tags">
+                        <span class="tag tag-genre">Komedija</span>
+                        <span class="tag tag-duration">128 min</span>
+                        <span class="tag tag-rating">&#9733; 7.7</span>
+                    </div>
+                </div>
+                <p class="schedule-desc">Deadpool i Wolverine udružuju snage u urnebesnoj i akcijom nabijenoj avanturi kroz multiverzum.</p>
+                <div class="showtimes">
+                    <h4 class="showtimes-label">Odaberite termin:</h4>
+                    <div class="showtimes-grid">
+                        <a href="sala.html?film=Deadpool %26 Wolverine&vrijeme=14:00&sala=3" class="showtime-btn">
+                            <span class="showtime-time">14:00</span>
+                            <span class="showtime-hall">Sala 3</span>
+                        </a>
+                        <a href="sala.html?film=Deadpool %26 Wolverine&vrijeme=17:30&sala=2" class="showtime-btn">
+                            <span class="showtime-time">17:30</span>
+                            <span class="showtime-hall">Sala 2</span>
+                        </a>
+                        <a href="sala.html?film=Deadpool %26 Wolverine&vrijeme=20:15&sala=1" class="showtime-btn popular">
+                            <span class="popular-badge">Popularno</span>
+                            <span class="showtime-time">20:15</span>
+                            <span class="showtime-hall">Sala 1</span>
+                        </a>
+                        <a href="sala.html?film=Deadpool %26 Wolverine&vrijeme=23:00&sala=3" class="showtime-btn">
+                            <span class="showtime-time">23:00</span>
+                            <span class="showtime-hall">Sala 3</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inside Out 2 -->
+        <div class="schedule-card">
+            <div class="schedule-poster">
+                <img src="slike/insideout 2.jpeg" alt="Inside Out 2">
+            </div>
+            <div class="schedule-body">
+                <div class="schedule-header">
+                    <h2 class="schedule-movie">Inside Out 2</h2>
+                    <div class="schedule-tags">
+                        <span class="tag tag-genre">Animirani</span>
+                        <span class="tag tag-duration">96 min</span>
+                        <span class="tag tag-rating">&#9733; 7.6</span>
+                    </div>
+                </div>
+                <p class="schedule-desc">Riley ulazi u tinejdžerske godine, a nove emocije donose novi nered u njenom umu.</p>
+                <div class="showtimes">
+                    <h4 class="showtimes-label">Odaberite termin:</h4>
+                    <div class="showtimes-grid">
+                        <a href="sala.html?film=Inside Out 2&vrijeme=12:00&sala=2" class="showtime-btn">
+                            <span class="showtime-time">12:00</span>
+                            <span class="showtime-hall">Sala 2</span>
+                        </a>
+                        <a href="sala.html?film=Inside Out 2&vrijeme=14:30&sala=3" class="showtime-btn">
+                            <span class="showtime-time">14:30</span>
+                            <span class="showtime-hall">Sala 3</span>
+                        </a>
+                        <a href="sala.html?film=Inside Out 2&vrijeme=17:00&sala=1" class="showtime-btn popular">
+                            <span class="popular-badge">Popularno</span>
+                            <span class="showtime-time">17:00</span>
+                            <span class="showtime-hall">Sala 1</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anora -->
+        <div class="schedule-card">
+            <div class="schedule-poster">
+                <img src="slike/anora.jpg" alt="Anora">
+            </div>
+            <div class="schedule-body">
+                <div class="schedule-header">
+                    <h2 class="schedule-movie">Anora</h2>
+                    <div class="schedule-tags">
+                        <span class="tag tag-genre">Drama</span>
+                        <span class="tag tag-duration">139 min</span>
+                        <span class="tag tag-rating">&#9733; 8.0</span>
+                    </div>
+                </div>
+                <p class="schedule-desc">Dobitnik Zlatne palme u Cannesu - priča o mladoj ženi čiji se život preokrenuo nakon neočekivanog braka.</p>
+                <div class="showtimes">
+                    <h4 class="showtimes-label">Odaberite termin:</h4>
+                    <div class="showtimes-grid">
+                        <a href="sala.html?film=Anora&vrijeme=16:30&sala=3" class="showtime-btn">
+                            <span class="showtime-time">16:30</span>
+                            <span class="showtime-hall">Sala 3</span>
+                        </a>
+                        <a href="sala.html?film=Anora&vrijeme=19:30&sala=1" class="showtime-btn popular">
+                            <span class="popular-badge">Popularno</span>
+                            <span class="showtime-time">19:30</span>
+                            <span class="showtime-hall">Sala 1</span>
+                        </a>
+                        <a href="sala.html?film=Anora&vrijeme=22:00&sala=2" class="showtime-btn">
+                            <span class="showtime-time">22:00</span>
+                            <span class="showtime-hall">Sala 2</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand"><span class="brand-icon">&#9655;</span> CineMax</div>
+            <p>&copy; 2026 CineMax Kino. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobilni meni
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-open');
+            navToggle.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-open');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Datum filter (vizuelni)
+        document.querySelectorAll('.date-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('revealed');
+            });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.schedule-card').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
