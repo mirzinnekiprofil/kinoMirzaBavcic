@@ -42,68 +42,8 @@
             <span class="bc-current">Odabir sjedišta</span>
         </div>
 
-        <!-- Info o projekciji -->
-        <div class="screening-info">
-            <div class="screening-left">
-                <h1 class="screening-movie" id="movieName">Gladijator II</h1>
-                <div class="screening-details">
-                    <div class="detail-chip">
-                        <span class="detail-icon">&#128336;</span>
-                        <span id="movieTime">20:30</span>
-                    </div>
-                    <div class="detail-chip">
-                        <span class="detail-icon">&#127916;</span>
-                        <span>Sala <span id="movieHall">1</span></span>
-                    </div>
-                    <div class="detail-chip">
-                        <span class="detail-icon">&#128197;</span>
-                        <span>Danas</span>
-                    </div>
-                </div>
-            </div>
-            <a href="raspored.html" class="btn-back">&#8592; Nazad na raspored</a>
-        </div>
-
-        <!-- Legenda sjedišta -->
-        <div class="seat-legend">
-            <div class="legend-item">
-                <span class="legend-seat legend-free"></span> Slobodno
-            </div>
-            <div class="legend-item">
-                <span class="legend-seat legend-taken"></span> Zauzeto
-            </div>
-            <div class="legend-item">
-                <span class="legend-seat legend-reserved"></span> Rezervisano
-            </div>
-        </div>
-
-        <!-- Platno -->
-        <div class="screen-container">
-            <div class="screen">P L A T N O</div>
-            <div class="screen-glow"></div>
-        </div>
-
-        <!-- Raspored sjedišta -->
-        <div class="hall-container">
-            <div class="seating-area" id="seatingArea">
-                <!-- Generisano JavaScript-om -->
-            </div>
-        </div>
-
-        <!-- Info o rezervaciji -->
-        <div class="reservation-panel" id="reservationPanel">
-            <div class="reservation-left">
-                <h3>Vaša rezervacija</h3>
-                <p class="selected-seats" id="selectedSeats">Kliknite na zeleno sjedište za rezervaciju</p>
-            </div>
-            <div class="reservation-right">
-                <div class="seat-counter">
-                    <span class="counter-num" id="seatCount">0</span>
-                    <span class="counter-label">sjedišta</span>
-                </div>
-                <button class="btn-confirm" id="btnConfirm" disabled>Potvrdi rezervaciju</button>
-            </div>
-        </div>
+        <!-- Sala - dinamicki generisano JavaScript-om -->
+        <div id="sala"></div>
 
     </main>
 
@@ -144,10 +84,6 @@
                     <span class="modal-value" id="modalTime"></span>
                 </div>
                 <div class="modal-row">
-                    <span class="modal-label">&#128186; Sala</span>
-                    <span class="modal-value" id="modalHall"></span>
-                </div>
-                <div class="modal-row">
                     <span class="modal-label">&#128186; Sjedišta</span>
                     <span class="modal-value" id="modalSeats"></span>
                 </div>
@@ -161,7 +97,8 @@
         </div>
     </div>
 
-    <script src="sala.js"></script>
+    <script src="scripts/kinoSala.js"></script>
+    <script src="scripts/app.js"></script>
 
 </body>
 </html>
