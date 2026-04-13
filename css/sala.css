@@ -324,9 +324,9 @@ a { text-decoration: none; color: inherit; }
 }
 
 .seat.reserved {
-    background: linear-gradient(180deg, #a78bfa 0%, #7c3aed 100%);
-    box-shadow: 0 2px 12px rgba(167, 139, 250, 0.3);
-    cursor: pointer;
+    background: linear-gradient(180deg, #9ca3af 0%, #6b7280 100%);
+    box-shadow: 0 2px 8px rgba(107, 114, 128, 0.2);
+    cursor: default;
     animation: reservePulse 0.4s ease;
 }
 
@@ -420,6 +420,42 @@ a { text-decoration: none; color: inherit; }
 .btn-confirm:not([disabled]):hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(124, 58, 237, 0.4);
+}
+
+/* ===== Projekcija Navigacija ===== */
+.projekcija-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.btn-nav {
+    padding: 0.7rem 1.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    font-family: var(--font);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    background: rgba(18, 18, 30, 0.5);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover:not([disabled]) {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 
 /* ===== Confirmation Modal ===== */
